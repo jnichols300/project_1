@@ -1,6 +1,5 @@
 // window.onload = function() {
 
-// Don't need initial values for these
 var score = 0;
 var highscore = 0;
 var questions = [
@@ -15,7 +14,7 @@ var questions = [
       ["Kareem Abdul-Jabbar played 20 seasons in which sport?","Baseball","Soccer","Tennis","Basketball","D"],
       ["In feet, how high is a basketball hoop?","10ft","20ft","8ft","11ft","A"]
 ];
-var  plHldr = 0,
+var  plHldr = 0,        // Don't need initial values for these
           container,
           triviaCont,
           question,
@@ -29,6 +28,24 @@ var  plHldr = 0,
 // Defining Variables
 function grabEle(retrieve) {
   return document.getElementById(retrieve);
+}
+// Used to call throughout code
+function scoreCheck() {
+    choices = document.getElementsByName("choices");
+    for(var i=0; i<choices.length; i++) {
+        if(choices[i].checked) {
+            choice = choices[i].value;
+          }
+    }
+    if(choice == questions[plHldr][5]) {
+         correct++;
+       }
+    else {
+      console.log("Wrong!");
+
+    }
+    plHldr++;
+    containerQuestion();
 }
 // Asking the Question
 function containerQuestion() {
@@ -54,21 +71,7 @@ function containerQuestion() {
   container.innerHTML += "<input type='radio' name='choices' value='D'> "+choiceD+"<br><br>";
   container.innerHTML += "<button onclick='scoreCheck ()' >Submit Answer</button>";
 }
-// Why are you broken
-function scoreCheck() {
-    choices = document.getElementsByName("choices");
-    for(var i=0; i<choices.length; i++) {
-        if(choices[i].checked) {
-            choice = choices[i].value;
-          }
-          // This should work
-                                        }
-    if(choice == question[plHldr][5]) {
-         correct++;
-    }
-    plHldr++;
-    containerQuestion();
-}
+
 window.addEventListener("load", containerQuestion, false);
 // }
 // function fSubmit() {

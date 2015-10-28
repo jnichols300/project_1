@@ -44,6 +44,12 @@ div#container {
   background-position:center;
 }
 
+#clockdiv {
+  font-size: 12px;
+  line-height: 14px;
+  display: inline;
+  margin-left: 20px;
+}
 
 /*Submit Button Styles*/
 
