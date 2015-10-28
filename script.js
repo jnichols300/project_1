@@ -1,5 +1,20 @@
 // window.onload = function() {
 
+// Don't need initial values for these
+var score = 0;
+var highscore = 0;
+var questions = [
+      ["In South Dakota it's illegal to to fall down and sleep where?","A Cheese Factory","Mcdonalds","Your neighbors yard","A farm","A"],
+      ["What was Kool-Aid originally called?","Yum Juice","Fruit Smack","Purple Pizzazz","Fun Crush","B"],
+      ["What did the Q in Q-Tip originally stand for?","Queen","Quiz","Quick","Quality","D"],
+      ["What is the sum of all numbers on a roulette wheel?","500","745","666","116","C"],
+      ["What is the official plural of Prius?","Prii","Prie","Priey","Prius's","A"],
+      ["What doesn't the brand Jacuzzi sell?","Toilets","Chairs","Mattresses","Tubs","B"],
+      ["Who won the 2013 Tour de France?","Lance Armstrong","Louie Patooie","Chris Froome","Johnny Carooney","C"],
+      ["Where's waldo?","France","India","Microwave","USA","B"],
+      ["Kareem Abdul-Jabbar played 20 seasons in which sport?","Baseball","Soccer","Tennis","Basketball","D"],
+      ["In feet, how high is a basketball hoop?","10ft","20ft","8ft","11ft","A"]
+];
 var  plHldr = 0,
           container,
           triviaCont,
@@ -11,18 +26,6 @@ var  plHldr = 0,
           choiceC,
           choiceD,
           correct=0;
-// Don't need initial values for these
-var score = 0;
-var highscore = 0;
-var questions = [
-      ["In South Dakota it's illegal to to fall down and sleep where?","A Cheese Factory","Mcdonalds","Your neighbors yard","A farm","A"],
-      ["What was Kool-Aid originally called?","Yum Juice","Fruit Smack","Purple Pizzazz","Fun Crush","B"],
-      ["What did the Q in Q-Tip originally stand for?","Queen","Quiz","Quick","Quality","D"],
-      ["What is the sum of all numbers on a roulette wheel?","500","745","666","116","C"],
-      ["What is the official plural of Prius?","Prii","Prie","Priey","Prius's","A"],
-      ["What doesn't the brand Jacuzzi sell?","Toilets","Chairs","Mattresses","Tubs","B"],
-      ["How much of the human brain is water?","70%","65%","85%","90%","C"]
-];
 // Defining Variables
 function grabEle(retrieve) {
   return document.getElementById(retrieve);
@@ -31,7 +34,8 @@ function grabEle(retrieve) {
 function containerQuestion() {
   container = grabEle("container");
   if(plHldr >= questions.length) {
-      container.innerHTML = "<h2>You got "+correct+" of "+questions.length+" questions correct</h2>";
+      container.innerHTML = "<h2>You got " +correct+ " right!</h2>";   // Returning end amount of answers
+
       grabEle("triviaCont").innerHTML = "You're Done!";
       plHldr = 0;
       correct = 0;
@@ -56,13 +60,11 @@ function scoreCheck() {
     for(var i=0; i<choices.length; i++) {
         if(choices[i].checked) {
             choice = choices[i].value;
-        }
-    }
+          }
+          // This should work
+                                        }
     if(choice == question[plHldr][5]) {
          correct++;
-    }
-    else {
-      alert("Wrong");
     }
     plHldr++;
     containerQuestion();

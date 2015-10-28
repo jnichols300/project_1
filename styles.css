@@ -1,30 +1,58 @@
-
+#wrapper {
+    position:absolute;
+    width:900px;
+    height:400px;
+    z-index:15;
+    top:50%;
+    left:50%;
+    margin:-270px 0 0 -380px;
+}
 
 body {
   font-family: 'Open Sans', sans-serif;
   color: white;
   background-color: #2f3238;
-
+  margin: 0 auto;
+  text-align: left;
+  padding: 0px 0px 40px 40px;
+  font-size: 20px;
+  line-height: 30px;
 }
+
+
 
 h1 {
   color: white;
+  margin-left: 20px;
+}
+
+h2 {
+  margin-left: 20px;
+  color: grey;
 }
 
 div#container {
-  border: #000 1px solid;
+  border: #333 1px solid;
+  border-radius: 10px;
   padding: 10px 40px 40px 40px;
-  width: 710px;
-  height: 290px;
-  background-image:url(sketch.jpg);
+  width: 640px;
+  height: 360px;
+  text-align: left;
+  background-image:url(sketch3.jpg);
   background-repeat:no-repeat;
   background-size:contain;
   background-position:center;
 }
 
+
+/*Submit Button Styles*/
+
 button {
-  background-color: #8f8f8f;
-  color: #2e2e2d;
+  background-color: white;
+  color: #2098d1;
+  height: 30px;
+  width: 100px;
+
 
 }
 
@@ -52,7 +80,7 @@ button {
   }
 }
 
-button {
+#container button {
   display: inline-block;
   vertical-align: middle;
   -webkit-transform: translateZ(0);
@@ -62,13 +90,83 @@ button {
   backface-visibility: hidden;
   -moz-osx-font-smoothing: grayscale;
 }
-button:hover, button:focus, button:active {
+#container button:hover, #container button:focus, #container button:active {
+  color:
   -webkit-animation-name: button;
   animation-name: button;
-  -webkit-animation-duration: 0.15s;
-  animation-duration: 0.15s;
+  -webkit-animation-duration: 0.20s;
+  animation-duration: 0.20s;
   -webkit-animation-timing-function: linear;
   animation-timing-function: linear;
   -webkit-animation-iteration-count: infinite;
   animation-iteration-count: infinite;
+}
+
+/*Category Button Styles*/
+
+button.otherCategories {
+    height: 50px;
+    width: 100px;
+    font-size: 14px;
+    border: 0 none;
+    border-radius: 5px;
+    background-color: #497485;
+    color: #fff;
+    cursor: pointer;
+    display: inline-block;
+    text-transform: uppercase;
+
+}
+
+button.otherCategories:nth-of-type(1) {
+  margin-left: 20px;
+}
+
+button.otherCategories:nth-of-type(2) {
+  margin-left: 10px;
+}
+
+/*Category Button Effects*/
+
+button.otherCategories {
+  display: inline-block;
+  vertical-align: middle;
+  -webkit-transform: translateZ(0);
+  transform: translateZ(0);
+  box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+  -moz-osx-font-smoothing: grayscale;
+  position: relative;
+  -webkit-transition-property: color;
+  transition-property: color;
+  -webkit-transition-duration: 0.3s;
+  transition-duration: 0.3s;
+}
+button.otherCategories:before {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: #7664ec;
+  -webkit-transform: scaleY(0);
+  transform: scaleY(0);
+  -webkit-transform-origin: 50% 0;
+  transform-origin: 50% 0;
+  -webkit-transition-property: transform;
+  transition-property: transform;
+  -webkit-transition-duration: 0.3s;
+  transition-duration: 0.3s;
+  -webkit-transition-timing-function: ease-out;
+  transition-timing-function: ease-out;
+}
+button.otherCategories:hover, button.otherCategories:focus, button.otherCategories:active {
+  color: white;
+}
+button.otherCategories:hover:before, button.otherCategories:focus:before, button.otherCategories:active:before {
+  -webkit-transform: scaleY(1);
+  transform: scaleY(1);
 }
