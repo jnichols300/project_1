@@ -12,3 +12,14 @@ As a user, I should be able to see how many questions I got correct at the end f
 As a user, I should be able to click a submit button to send my answer in order to move to the next question.
 
 As a user, I should be able to easily select answers for ease of use so that I don't get frustrated.
+
+Technologies:
+
+HTML
+Javascript
+CSS
+Google
+
+Problems:
+
+Did a ton of googling to try and figure some stuff out. Didn't finish the timer for countdown even though I can, it's pretty easy I think. The categories I didn't get to either. I have an idea of how to do it, but not 100% sure how it works.

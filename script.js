@@ -10,7 +10,7 @@ var questions = [
       ["What is the official plural of Prius?","Prii","Prie","Priey","Prius's","A"],
       ["What doesn't the brand Jacuzzi sell?","Toilets","Chairs","Mattresses","Tubs","B"],
       ["Who won the 2013 Tour de France?","Lance Armstrong","Louie Patooie","Chris Froome","Johnny Carooney","C"],
-      ["Where's waldo?","France","India","Microwave","USA","B"],
+      ["How tall is Tom Cruise?","5'7","5'4","5'9","5'11","A"],
       ["Kareem Abdul-Jabbar played 20 seasons in which sport?","Baseball","Soccer","Tennis","Basketball","D"],
       ["In feet, how high is a basketball hoop?","10ft","20ft","8ft","11ft","A"]
 ];
