@@ -1,0 +1,74 @@
+
+
+body {
+  font-family: 'Open Sans', sans-serif;
+  color: white;
+  background-color: #2f3238;
+
+}
+
+h1 {
+  color: white;
+}
+
+div#container {
+  border: #000 1px solid;
+  padding: 10px 40px 40px 40px;
+  width: 710px;
+  height: 290px;
+  background-image:url(sketch.jpg);
+  background-repeat:no-repeat;
+  background-size:contain;
+  background-position:center;
+}
+
+button {
+  background-color: #8f8f8f;
+  color: #2e2e2d;
+
+}
+
+@-webkit-keyframes button {
+  50% {
+    -webkit-transform: translateX(3px) rotate(2deg);
+    transform: translateX(3px) rotate(2deg);
+  }
+
+  100% {
+    -webkit-transform: translateX(-3px) rotate(-2deg);
+    transform: translateX(-3px) rotate(-2deg);
+  }
+}
+
+@keyframes button {
+  50% {
+    -webkit-transform: translateX(3px) rotate(2deg);
+    transform: translateX(3px) rotate(2deg);
+  }
+
+  100% {
+    -webkit-transform: translateX(-3px) rotate(-2deg);
+    transform: translateX(-3px) rotate(-2deg);
+  }
+}
+
+button {
+  display: inline-block;
+  vertical-align: middle;
+  -webkit-transform: translateZ(0);
+  transform: translateZ(0);
+  box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+  -moz-osx-font-smoothing: grayscale;
+}
+button:hover, button:focus, button:active {
+  -webkit-animation-name: button;
+  animation-name: button;
+  -webkit-animation-duration: 0.15s;
+  animation-duration: 0.15s;
+  -webkit-animation-timing-function: linear;
+  animation-timing-function: linear;
+  -webkit-animation-iteration-count: infinite;
+  animation-iteration-count: infinite;
+}
