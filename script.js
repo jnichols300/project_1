@@ -23,6 +23,8 @@ var questions = [
       ["What doesn't the brand Jacuzzi sell?","Toilets","Chairs","Mattresses","Tubs","B"],
       ["How much of the human brain is water?","70%","65%","85%","90%","C"]
 ];
+// I would like to recommend using hashes in lieu of the array here. Often times indexing by integers can be cryptic. If we use an object instead we can start indexing with more semantic strings like choiceA, choiceB, correctAnswer, question so on and so forth. THe possibilities are limitless. If I were to add another characteristic to your questions in your current format, I'd have to pause for a bit to jsut make sure I got the index right. If we use objects, we can just add another key value pair.
+
 // Defining Variables
 function grabEle(retrieve) {
   return document.getElementById(retrieve);
@@ -49,6 +51,7 @@ function containerQuestion() {
   container.innerHTML += "<input type='radio' name='choices' value='C'> "+choiceC+"<br>";
   container.innerHTML += "<input type='radio' name='choices' value='D'> "+choiceD+"<br><br>";
   container.innerHTML += "<button onclick='scoreCheck ()' >Submit Answer</button>";
+  // I think it'd be nice to abstract the DOM manipulation here into a method. Maybe generateAnswers or something
 }
 // Why are you broken
 function scoreCheck() {
@@ -79,3 +82,5 @@ window.addEventListener("load", containerQuestion, false);
 //       }
 //
 // }
+
+// make sure to get rid of any extra code you have when you go to production.
